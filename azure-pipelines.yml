@@ -18,8 +18,8 @@ steps:
      {
        "files": [
          {
-           "pattern": "G:\AzureDevOpsAgent-0\_work\39\a/Lodgement.Api-develop-20191021.4.zip", "target": "ADV-build/Podium/SalesTools/Lodgement.Api-develop/20191021.4/",
-           "target": "generic-local/tfs-sanity2/"
+           "pattern": "G:\AzureDevOpsAgent-0\_work\39\a/Lodgement.Api-develop-20191021.4.zip",
+           "target": "ADV-build/Podium/SalesTools/Lodgement.Api-develop/20191021.4/",
          }
        ]
      }
