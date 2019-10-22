@@ -33,7 +33,7 @@ steps:
      {
        "files": [
          {
-           "pattern": "D:\files1\39/a\a1.in",
+           "pattern": "files1\39/a\a1.in",
            "target": "ADV-build/Podium/SalesTools/Lodgement.Api-develop/20191021.4/"
          }
        ]
