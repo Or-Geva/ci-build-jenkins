@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: BarBelity.jfrog-artifactory-vsts-extension.artifactory-generic-upload.ArtifactoryGenericUpload@1
+  displayName: 'Artifactory Generic Upload'
+  inputs:
+    artifactoryService: 'barb3-aol-token'
+    fileSpec: |
+     {
+       "files": [
+         {
+           "pattern": "G:\AzureDevOpsAgent-0\_work\39\a/Lodgement.Api-develop-20191021.4.zip", "target": "ADV-build/Podium/SalesTools/Lodgement.Api-develop/20191021.4/",
+           "target": "generic-local/tfs-sanity2/"
+         }
+       ]
+     }
+    collectBuildInfo: true
