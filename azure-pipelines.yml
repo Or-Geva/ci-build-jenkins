@@ -19,7 +19,7 @@ steps:
        "files": [
          {
            "pattern": "generic-local/tfs-sanity/a1.in*",
-           "target": "files1/39/a/",
+           "target": "D:/files1/39/a/",
            "flat": "true"
          }
        ]
@@ -33,7 +33,7 @@ steps:
      {
        "files": [
          {
-           "pattern": "files1\39/a\a1.in",
+           "pattern": "D:\files1\39/a\a1.in",
            "target": "ADV-build/Podium/SalesTools/Lodgement.Api-develop/20191021.4/"
          }
        ]
