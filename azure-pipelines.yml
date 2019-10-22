@@ -25,7 +25,6 @@ steps:
        ]
      }
     collectBuildInfo: true
-  enabled: false
 - task: BarBelity.jfrog-artifactory-vsts-extension.artifactory-generic-upload.ArtifactoryGenericUpload@1
   displayName: 'Artifactory Generic Upload'
   inputs:
