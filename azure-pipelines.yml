@@ -10,6 +10,22 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
+- task: BarBelity.jfrog-artifactory-vsts-extension.artifactory-generic-download.ArtifactoryGenericDownload@2
+  displayName: 'Artifactory Generic Download'
+  inputs:
+    connection: 'barb3-aol-token'
+    fileSpec: |
+     {
+       "files": [
+         {
+           "pattern": "generic-local/tfs-sanity/a1.in*",
+           "target": "files1/39/a/",
+           "flat": "true"
+         }
+       ]
+     }
+    collectBuildInfo: true
+  enabled: false
 - task: BarBelity.jfrog-artifactory-vsts-extension.artifactory-generic-upload.ArtifactoryGenericUpload@1
   displayName: 'Artifactory Generic Upload'
   inputs:
@@ -18,7 +34,7 @@ steps:
      {
        "files": [
          {
-           "pattern": "G:\AzureDevOpsAgent-0\_work\39\a/Lodgement.Api-develop-20191021.4.zip",
+           "pattern": "D:\files1\39/a\a1.in",
            "target": "ADV-build/Podium/SalesTools/Lodgement.Api-develop/20191021.4/"
          }
        ]
